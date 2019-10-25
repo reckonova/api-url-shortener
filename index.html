@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <title>URL Shortener</title>
+    <link href="/public/url-style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-   <head>
-      <title>URL Shortener</title>
-      <link href="/public/url-style.css" rel="stylesheet" type="text/css">
-   </head>
+  <body>
+    <div class="container">
+      <h2>URL Shortener Microservice</h2>
 
-   <body>
-      <div class="container">
-        <h2>URL Shortener Microservice</h2>
-      
-        <section>
-        <h3>Instructions: </h3>
+      <section>
+        <h3>Instructions:</h3>
         <ol>
-          <li>POST an URL to <code>[project_url]/api/shorturl/new</code> and receive a shortened URL in the JSON response.<br>Example : <code>{"original_url":"www.google.com","short_url":1}</code></li>
-          </ol>.
-          <h3>Short URL Creation </h3>
-        <ol>
-           
-        <form action="api/shorturl/new" method="POST" >
-          <label for="url_input">URL to be shortened</label>
-          <input id="url_input" type="text" name="url" value="https://www.freecodecamp.com">
-          <input type="submit" value="POST URL">
-        </form>
-          <li>Invalid URLs (ex <code>http(s)://www.example.com(/more/routes)</code> ) will look like a JSON response with an error like <code>{"error":"invalid URL"}</code><br>
-            <ol><h4>HINT: to be sure that the submitted url points to a valid site you can use the function <code>dns.lookup(host, cb)</code> from the <code>dns</code> core module.</h4>
-            </ol>
-          </li><br>
-          
-          
-        </ol>
-        
-        
-        <h3>Example Usage:</h3>
-          <ol>
-            
-          
-          <li>When I visit the shortened URL, it will redirect me to my original link.
-          <ol>Example: 
-        <a href="https://1fcc-url-shortener-dcc.glitch.me/api/shorturl/898">
-          https://1fcc-url-shortener-dcc.glitch.me/api/shorturl/898
-        </a>
-              <ol>   
-       <b>Will Redirect to:</b> https://forum.freecodecamp.com
-            </ol>
-            </ol>  
-            
+          <li>
+            POST an URL to <code>[project_url]/api/shorturl/new</code> and
+            receive a shortened URL in the JSON response.<br />Example :
+            <code>{"original_url":"www.google.com","short_url":1}</code>
           </li>
-            
-            
-</ol>
-    
-             </section>
-      </div>
-     
-   </body>
+        </ol>
+        .
+        <h3>Short URL Creation</h3>
+        <ol>
+          <form action="api/shorturl/new" method="POST">
+            <label for="url_input">URL to be shortened</label>
+            <input
+              id="url_input"
+              type="text"
+              name="url"
+              value="https://www.freecodecamp.com"
+            />
+            <input type="submit" value="POST URL" />
+          </form>
+          <li>
+            Invalid URLs (ex
+            <code>http(s)://www.example.com(/more/routes)</code> ) will look
+            like a JSON response with an error like
+            <code>{"error":"invalid URL"}</code><br />
+            <ol>
+              <h4>
+                HINT: to be sure that the submitted url points to a valid site
+                you can use the function <code>dns.lookup(host, cb)</code> from
+                the <code>dns</code> core module.
+              </h4>
+            </ol>
+          </li>
+          <br />
+        </ol>
 
-
+        <h3>Example Usage:</h3>
+        <ol>
+          <li>
+            When I visit the shortened URL, it will redirect me to my original
+            link.
+            <ol>
+              Example:
+              <a
+                href="https://1fcc-url-shortener-dcc.glitch.me/api/shorturl/898"
+              >
+                https://1fcc-url-shortener-dcc.glitch.me/api/shorturl/898
+              </a>
+              <ol>
+                <b>Will Redirect to:</b>
+                https://forum.freecodecamp.com
+              </ol>
+            </ol>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </body>
 </html>
